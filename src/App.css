@@ -1,31 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
- */
 
- .SuperContainer{
-  display: grid;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: auto;
-/*   border: 1px solid black; */
- }
-
- .Container{
-  padding: 15%;
-  align-items: center;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin: auto;
-  box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
-  
- }
 
 .Lista{
   display: flex;
@@ -50,12 +23,7 @@
 #add:active{
   background-color: rgb(13, 139, 9);
 }
-.input{
-  display: flex;
-  width: 100%;
-  gap: 10PX;
 
-}
 .btn{
   display: flex;
   justify-content: center;
@@ -79,22 +47,7 @@ background-color: rgb(255, 217, 0);
 background-color: rgb(189, 161, 3);
 }
 
-#update{
-  border-radius: 5px;
-  border: none;
-  padding: 3px;
-  margin: 2px;
-  background-color: rgb(108, 177, 255);
-  color: white;
-  cursor: pointer;
 
-}
-#update:hover{
-background-color: rgb(76, 143, 219);
-}
-#update:active{
-background-color: rgb(53, 130, 218);
-}
 
  .text{
 
@@ -192,4 +145,10 @@ background-color: rgb(53, 130, 218);
 
 .label-underline{    
 text-decoration: line-through;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,12 +1,13 @@
 import { GrAdd } from "react-icons/gr";
 import { useState } from "react";
+import { Box, Button, Input, Textarea } from "@chakra-ui/react";
 
 function TaskList({ createNewTask /* createDescription */ }) {
   const [tarea, setTarea] = useState("");
   const [nota, setnota] = useState("");
   return (
     <>
-      <div className="Container1">
+      <Box w={"100%"}>
         <form
           onSubmit={(e) => {
             createNewTask(tarea, nota);
@@ -14,25 +15,32 @@ function TaskList({ createNewTask /* createDescription */ }) {
             setTarea("");
             setnota("");
             e.preventDefault();
+            window.location.reload()
           }}
         >
-          <input
-            type="text"
-            className="text"
-            placeholder="Add your new todo"
-            onChange={(e) => setTarea(e.target.value)}
-          />
-          <input
-            type="text"
-            className="text"
-            placeholder="Add description"
-            onChange={(e) => setnota(e.target.value)}
-          />
-          <button id="add">
-            <GrAdd />
-          </button>
+          <Box >
+            <Input 
+            w={"25vw"}
+              type="text"
+              className="text"
+              placeholder="Add your new todo"
+              onChange={(e) => setTarea(e.target.value)}
+            />
+            <Textarea
+            w={"30vw"}
+              type="text"
+              className="text"
+              placeholder="Add description"
+              onChange={(e) => setnota(e.target.value)}
+            />
+          </Box>
+          <Box display={"flex"} justifyContent= {"center"} alignItems = {"center"}>
+            <Button type="submit" id="add">
+              <GrAdd />
+            </Button>
+          </Box>
         </form>
-      </div>
+      </Box>
     </>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import TaskList from "./TaskList";
 import { useEffect } from "react";
 import TaskCard from "./TaskCard";
+import { Box, Button } from "@chakra-ui/react";
 
 function Task() {
   const [taskItems, setTaskItems] = useState([]);
@@ -93,7 +94,7 @@ function Task() {
   }, [taskItems]);
 
   return (
-    <div className="task">
+    <Box >
       <TaskList
         createNewTask={createNewTask}
         /*         createDescription={createDescription} */
@@ -101,7 +102,7 @@ function Task() {
         taskItems={taskItems}
       />
 
-      <div>
+      <Box>
         {taskItems.map((task, i) => (
           <TaskCard
             key={i}
@@ -110,13 +111,13 @@ function Task() {
             updateTask={updateTask}
           />
         ))}
-        <div>
-          <button id="Clear" onClick={deleteTask}>
+        <Box display={"flex"} justifyContent = {"end"}>
+          <Button id="Clear" onClick={deleteTask}>
             Clear All
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
