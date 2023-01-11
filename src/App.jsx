@@ -3,6 +3,7 @@ import {  Route, Routes, Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Apps from "./Tasksito";
 import Nosotros from "./Componentes/Nosotros";
+import ToggleMode from "./Componentes/ToggleMode";
 
 function App() {
   const Home = lazy(() => import("./Componentes/Home"));
@@ -10,6 +11,8 @@ function App() {
   const Contact = lazy(() => import("./Componentes/Nosotros"));
 
   return (
+    <>
+    <ToggleMode/>
     <div className="App">
       <nav>
         <ul className='Lista'>
@@ -33,6 +36,7 @@ function App() {
         </Routes>
       </Suspense>
     </div>
+    </>
   );
 }
 
