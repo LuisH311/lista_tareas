@@ -46,7 +46,6 @@ function TaskCard({ tareaHecha, task, updateTask }) {
           id="editar"
           onClick={(e) => {
             /* e.preventDefault(); */
-
             if (!upDateValidate) {
               setUpDateValidate(true);
             } else {
@@ -57,7 +56,6 @@ function TaskCard({ tareaHecha, task, updateTask }) {
           <AiOutlineEdit />
         </Button>
       </Box>
-
       {upDateValidate ? (
         <Box
           display="flex"
